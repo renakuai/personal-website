@@ -21,11 +21,13 @@
   --lemon: #FCFD75;
   --periwinkle: #EFF3FF;
   --purple: #4774EE;
-  --bright-purple: #4774EE;
+  --bright-purple: #5A44FF;
   --light-purple: #A097AF;
   --dark-purple: #2B3A63;
   --dark-blue: #0D0A2B;
   --black: #252628;
+  --fuschia: #EF39B1;
+  --mint: #D9FBF5;
 }
 
 /*generic header sizes*/
@@ -71,13 +73,14 @@ h5.Post__Link,
 h5.Post__Link > a,
 h5.Post__Link > a:active {
   font-size: var(--h5);
+  font-weight: var(--semibold);
   margin: 0;
-  color: var(--black);
-  text-decoration: underline;
+  color: var(--bright-purple);
+  text-decoration: none;
 }
 
 h5.Post__Link > a:hover {
-  color: var(--purple);
+  text-decoration: underline;
 }
 
 /*body / main styles*/

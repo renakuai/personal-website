@@ -13,10 +13,6 @@ exports.post_list = function(req, res) {
         return next(err)
       }
       res.send(list_post);
-      //res.render('index', {
-      // title: 'List of Posts',
-      //  posts: list_post
-      // });
     })
 }
 
@@ -46,13 +42,6 @@ exports.post_detail = function (req, res) {
         err.status = 404;
         return next(err);
       }
-      console.log('post detail:'+postdetails.post);
-    console.log('post comments:' + postdetails.comments);
-      // res.render('post', {
-      // title: 'Post Details',
-      //  postdetail: postdetails.post,
-      //  comments: postdetails.comments
-      // });
     res.send({
       postdetail: postdetails.post,
       comments: postdetails.comments,

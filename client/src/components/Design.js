@@ -9,7 +9,7 @@ const Design = () => {
   }, [])
 
   return (
-    <section className="Design Red">
+    <section className="Design Mint">
       <div className= "Main__Grid">
         <main>
           <h1>Design</h1>

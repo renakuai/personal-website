@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const { DateTime } = require("Luxon")
+const { DateTime } = require("luxon")
 
 const PostSchema = new Schema({
   title: {

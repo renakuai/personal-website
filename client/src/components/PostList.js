@@ -7,7 +7,7 @@ const PostList = () => {
   const [ link, setLink ] = useOutletContext();
 
   const getPostList = () => {
-    fetch('http://localhost:9000/writing')
+    fetch('https://renas-blog.herokuapp.com/writing')
       .then((res) => res.json())
       .then((res) => {
         setPostList(res);
@@ -22,7 +22,7 @@ const PostList = () => {
   console.log(postList);
   
   return (
-    <section className="PostList White">
+    <section className="PostList Gradient">
       <div className= "Main__Grid">
         <main className="Blog">
           <h1>Writing</h1>

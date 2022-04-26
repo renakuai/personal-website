@@ -29,7 +29,7 @@ const Home = () => {
         
                 <p>When I'm not working, I like to watch a lot of tv, go for runs outside, obsess over my cat, and occasionally <a href="https://www.instagram.com/renamakesart">watercolor paint</a>.</p>
               
-                <p className="footnote">*I built this website using a React front-end and Express / MongoDB backend</p>
+                <p className="Footnote">*I built this website using React and Express / MongoDB</p>
               </div>
           </article>
 

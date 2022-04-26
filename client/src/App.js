@@ -19,12 +19,12 @@ function App() {
         </div>
       }
       {link == 'design' &&
-        <div className="Nav__Red">
+        <div className="Nav__Mint">
           <Nav />
         </div>
       }
       {link == 'writing' &&
-        <div className="Nav__White">
+        <div className="Nav__Gradient">
           <Nav />
         </div>
       }
