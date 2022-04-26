@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&display=swap');
+
+:root {
+  --ibm: "IBM Plex Mono", monospace;
+  --h1: 2.5rem;
+  --h2: 2.25rem;
+  --h3: 2rem;
+  --h4: 1.5rem;
+  --h5: 0.95rem;
+  --body-size: 0.85rem;
+  --h6: 0.75rem;
+  --label-style: uppercase;
+  --bold: 700;
+  --semibold: 600;
+  --regular: 400;
+  --cyan: #9AFAE3F;
+  --pink: #FEEEF2;
+  --brick: #BD473B;
+  --dark-red: #7C241B;
+  --light-red: #AC8A87;
+  --lemon: #FCFD75;
+  --periwinkle: #EFF3FF;
+  --purple: #4774EE;
+  --bright-purple: #4774EE;
+  --light-purple: #A097AF;
+  --dark-purple: #2B3A63;
+  --dark-blue: #0D0A2B;
+  --black: #252628;
+}
+
+/*generic header sizes*/
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+h4 {
+  font-size: var(--h4);
+}
+h5 {
+  font-size: var(--h5);
+  margin: 0;
+}
+h6 {
+  font-size: var(--h6);
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid;
+}
+p {
+  font-size: var(--body-size);
+  line-height: 1.45rem;
+}
+p.Footnote {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  font-style: italic;
+}
+p.Post__Date {
+  font-size: var(--h6);
+  text-transform: uppercase;
+  padding-bottom:2rem;
+  border-bottom: 1px solid;
+  color: var(--light-purple);
+}
+h5.Post__Link,
+h5.Post__Link > a,
+h5.Post__Link > a:active {
+  font-size: var(--h5);
+  margin: 0;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+h5.Post__Link > a:hover {
+  color: var(--purple);
+}
+
+/*body / main styles*/
+body {
+  font-family: var(--ibm);
+  font-size: var(--body-size);
+  margin: 0;
+  padding: 0;
+}

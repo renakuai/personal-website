@@ -1,0 +1,3 @@
+# untracked files or folders
+node_modules/
+.env

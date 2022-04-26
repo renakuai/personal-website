@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p Posts
+   each post in posts
+      p #{post.title}
+      a(href=post.url) View post
