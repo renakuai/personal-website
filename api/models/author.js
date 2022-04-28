@@ -2,11 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const AuthorSchema = new Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  password: {
+  username: {
     type: String,
     required: true,
   },
@@ -14,13 +10,13 @@ const AuthorSchema = new Schema({
     type: String,
     required: true,
   },
-  role: {
+  password: {
     type: String,
+    required: true
+  },
+  isAdmin: {
+    type: Boolean,
     required: true,
-    enum: [
-      'Admin',
-      'User'
-    ]
   }
 })
 

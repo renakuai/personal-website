@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 const Code = () => {
@@ -21,7 +20,7 @@ const Code = () => {
 
             <article className = "Proj">
                   <div className = "Proj__Img-Wrapper">
-                    <img className = "Proj__Img" src = "images/proj-blog.svg" alt="Image of my blog" />
+                    <img className = "Proj__Img" src = "images/proj-blog.svg" alt="My blog" />
                   </div>
                   <div className = "Proj__Desc-Wrapper">
                     <h5>Personal Blog</h5>
@@ -32,7 +31,7 @@ const Code = () => {
               <article className = "Proj">
                 <a className = "Proj__Link" href="https://github.com/renakuai/nursery-inventory-app">
                   <div className = "Proj__Img-Wrapper">
-                    <img className = "Proj__Img" src = "images/proj-nursery.svg" alt="Image of a Nursery Inventory Project" />
+                    <img className = "Proj__Img" src = "images/proj-nursery.svg" alt="Nursery Inventory Project" />
                   </div>
                   <div className = "Proj__Desc-Wrapper">
                     <h5>Nursery Inventory App</h5>
@@ -49,7 +48,7 @@ const Code = () => {
               <article className = "Proj">
             <a className = "Proj__Link" href="https://github.com/renakuai/kuai-li-family-recipes">
             <div className = "Proj__Img-Wrapper">
-              <img className = "Proj__Img" src = "images/proj-recipes.svg" alt="Image of Recipes project" />
+              <img className = "Proj__Img" src = "images/proj-recipes.svg" alt="Recipes project" />
             </div>
             <div className = "Proj__Desc-Wrapper">
               <h5>Kuai-Li Family Recipes</h5>
@@ -86,7 +85,7 @@ const Code = () => {
               <article className = "Proj">
             <a className = "Proj__Link" href="https://github.com/renakuai/memory-game">
             <div className = "Proj__Img-Wrapper">
-              <img className = "Proj__Img" src = "images/proj-memory.svg" alt="Image of Pokemon memory game" />
+              <img className = "Proj__Img" src = "images/proj-memory.svg" alt="Pokemon memory game" />
             </div>
             <div className = "Proj__Desc-Wrapper">
               <h5>Pokemon Memory Game</h5>
@@ -103,7 +102,7 @@ const Code = () => {
               <article className = "Proj">
             <a className = "Proj__Link" href="https://github.com/renakuai/to-do-app">
             <div className = "Proj__Img-Wrapper">
-              <img className = "Proj__Img" src = "images/proj-todo.svg" alt="Image of to do app" />
+              <img className = "Proj__Img" src = "images/proj-todo.svg" alt="A to do app" />
             </div>
             <div className = "Proj__Desc-Wrapper">
               <h5>Todo App</h5>

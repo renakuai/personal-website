@@ -19,6 +19,26 @@ main {
   min-height: 100vh;
 }
 
+
+.Nav__Item > button {
+  font-weight: var(--semibold);
+  font-family: var(--ibm);
+  font-size: var(--body);
+  border: 0;
+  margin: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.Nav__Item > button:hover {
+  background-color: #FEFEEF;
+}
+
 /*pink theme styles*/
 .Pink, 
 .Nav__Pink {
@@ -29,6 +49,11 @@ main {
 .Pink > h6 {
   color: var(--dark-red);
   border-color: var(--dark-red);
+}
+
+.Nav__Pink button {
+  border-color: var(--brick);
+  color: var(--brick);
 }
 
 .Nav__Pink a {
@@ -68,7 +93,8 @@ div.Pink {
   background-position: right;
 }
 
-.Nav__Periwinkle {
+.Nav__Periwinkle,
+.Nav__Periwinkle button{
   background-color: var(--periwinkle);
   color: var(--purple);
 }
@@ -101,11 +127,20 @@ div.Periwinkle {
   border-bottom: 1px dotted var(--dark-purple)
 }
 
-/*white theme*/
+/*gradient theme*/
 .Gradient, 
 .Nav__.Gradient {
   background-color: #FFF;
   color: var(--black);
+}
+
+.Gradient h1 {
+  font-weight: var(--bold);
+  background: linear-gradient(46.95deg, var(--bright-purple) 10.25%, var(--fuschia) 30.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .Gradient > h6 {
@@ -113,14 +148,22 @@ div.Periwinkle {
   border-color: var(--black);
 }
 
-.Nav__Gradient a {
-  color: var(--black);
-}
-
+.Nav__Gradient a,
 .Nav__Gradient a:active,
 .Nav__Gradient a:visited,
 .Nav__Gradient a:focus {
   color: var(--black);
+}
+
+.Gradient a,
+.Gradient a:active,
+.Gradient a:visited,
+.Gradient a:focus {
+  color: var(--bright-purple);
+}
+
+.Gradient a:hover {
+  color: var(--dark-purple)
 }
 
 .Gradient li.active {
@@ -142,7 +185,10 @@ div.Gradient {
   color: var(--dark-purple);
 }
 
-.Nav__Mint {
+
+
+.Nav__Mint,
+.Nav__Mint button {
   background-color: var(--mint);
   color: var(--dark-purple);
 }
@@ -175,6 +221,13 @@ div.Mint {
   border-bottom: 1px dotted var(--dark-purple);
 }
 
+.Mint .Empty {
+  padding: 5rem;
+  text-align: center;
+  border: 1px solid var(--dark-blue);
+}
+
+
 /*homepage header styles*/
 nav.Nav__Main {
   margin:0;
@@ -183,7 +236,8 @@ nav.Nav__Main {
 }
 
 ul.Nav__Main,
-ul.Nav__Right {
+ul.Nav__Right,
+.Auth > ul {
   grid-column: 2/3;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -197,12 +251,17 @@ ul.Nav__Right {
 
 ul.Nav__Main {
   justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 ul.Nav__Right {
   padding-top: 0;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
 }
 
 nav.Nav__Main  a {
@@ -505,16 +564,6 @@ a.Proj__Link:visited {
   margin-bottom: 1rem;
 }
 
-.Post__Header-Wrapper > h1,
-.Blog > h1 {
-  font-weight: var(--bold);
-  background: linear-gradient(46.95deg, var(--bright-purple) 10.25%, var(--fuschia) 30.49%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
 .Header__Metadata-Wrapper,
 .Header__Metadata-Wrapper > p {
   display: flex;
@@ -536,6 +585,23 @@ a.Proj__Link:visited {
   margin-bottom: 3rem;
 }
 
+.Loading > p {
+  animation: loading 3s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+      opacity: 0.25;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
 .Comment {
   margin-bottom: 2rem;
 }
@@ -555,14 +621,134 @@ p.Comment__Metadata {
   margin: 0;
 }
 
+.Form__Comment {
+  box-shadow: 0px 0px 8px rgba(164, 164, 164, 0.25);
+  background-color: #fff;
+  padding-bottom: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.Form__Comment > Form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Form__Comment p {
+  margin: 0;
+}
+
 /*design page*/
 
 
-.Mint .Empty {
-  padding: 5rem;
-  text-align: center;
-  border: 1px solid var(--dark-blue);
+/*auth pages*/
+.Auth--Wrapper {
+  border: 1px solid;
+  padding: 0 2rem 2rem 2rem;
+  width: 400px;
 }
+
+main.Auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Instructions > p {
+  margin-bottom: 3rem;
+}
+
+
+.Auth > ul {
+  gap: 2rem;
+}
+
+nav.Auth {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--light-purple)
+}
+
+.Auth > ul {
+  padding: 1rem 0 1rem 0;
+}
+
+.Auth__Link > a,
+.Auth__Link > a:visited,
+.Auth__Link > a:active {
+  color: var(--dark-purple);
+}
+
+.Auth__Link > a:hover {
+  color: var(--purple);
+}
+
+.Auth__Container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap:0.5rem;
+}
+
+.Auth__Container > h5 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.Auth__Container > p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+a.Active,
+a.Active:hover,
+a.Active:visited,
+a.Active:active {
+  text-decoration: underline;
+  font-weight: var(--bold);
+  color: var(--bright-purple);
+}
+
+/*forms*/
+.Auth__Container > .Error,
+form > p {
+  color: red;
+  margin: 0;
+}
+
+form > h5 {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-top: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-family: var(--ibm);
+  border: 1px solid var(--light-purple);
+}
+
+form > button {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  font-family: var(--ibm);
+  font-size: var(--body);
+  color: #fff;
+  background-color: var(--purple);
+  border: none;
+}
+
+form > button:hover,
+form > button:focus {
+  background-color: var(--dark-purple);
+  cursor: pointer;
+}
+
 
 /*media queries*/
 @media only screen and (max-width: 845px) {
@@ -591,6 +777,9 @@ p.Comment__Metadata {
   .Resume__Side-Wrapper,
   .Resume__Main-Wrapper {
     width: 100%;
+  }
+  ul.Nav__Right {
+    gap: 1rem;
   }
 }
 

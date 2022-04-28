@@ -5,30 +5,39 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   const [link, setLink] = useState('home');
+  const [user, setUser] = useState({
+    auth: false,
+    name: ''
+  });
+
+  const userProps = {
+    user,
+    setUser,
+  }
 
   return (
     <section className="App">
-      {link == 'home' &&
+      {link === 'home' &&
         <div className="Nav__Pink">
-          <Nav />
+          <Nav {...userProps}/>
         </div>
       }
-      {link == 'code' &&
+      {link === 'code' &&
         <div className="Nav__Periwinkle">
           <Nav />
         </div>
       }
-      {link == 'design' &&
+      {link === 'design' &&
         <div className="Nav__Mint">
-          <Nav />
+          <Nav {...userProps}/>
         </div>
       }
-      {link == 'writing' &&
+      {(link === 'writing' || link === 'auth') &&
         <div className="Nav__Gradient">
-          <Nav />
+          <Nav {...userProps}/>
         </div>
       }
-      <Outlet context={[link, setLink]}/>
+      <Outlet context={[link, setLink, user, setUser]}/>
     </section>
   );
 }

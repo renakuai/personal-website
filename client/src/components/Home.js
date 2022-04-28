@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 
@@ -14,7 +14,7 @@ const Home = () => {
       <div className= "Main__Grid">
         <main>
           <header className="Name">
-            <h1>Hi, I'm</h1> <img className="Signature" src="images/name-red.svg" alt="Cursive image of my name, Rena" />
+            <h1>Hi, I'm</h1> <img className="Signature" src="images/name-red.svg" alt="My name, Rena" />
           </header>
       
           <div className = "Accent">

@@ -3,11 +3,12 @@ const Author = require('../models/author');
 const Comment = require('../models/comment');
 var async = require('async');
 const mongoose = require('mongoose');
+const { body, validationResult } = require('express-validator');
 
 exports.post_list = function(req, res) {
   Post.find({ status : 'Published'}, 'title date author')
     .sort({ date: 'asc' })
-    .populate('author', 'name')
+    .populate('author', 'username')
     .exec(function (err, list_post) {
       if (err) {
         return next(err)
@@ -20,12 +21,13 @@ exports.post_detail = function (req, res) {
   async.parallel({
     post: function(callback) {
       Post.findById(req.params.id)
-        .populate('author', 'name')
+        .populate('author', 'username')
         .exec(callback)
     },
     comments: function (callback) {
       Comment.find({ 'post': mongoose.Types.ObjectId(req.params.id) })
-        .populate('author', 'name')
+        .sort({date: 1})
+        .populate('author', 'username')
         .exec(callback)
     },
     commentCount: function (callback) {
