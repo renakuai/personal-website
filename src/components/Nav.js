@@ -22,7 +22,8 @@ const Nav = (props) => {
       </ul>
       <ul>
         <li><Link to='/about'>About</Link></li>
-        <li><Link to='/projects'>Projects</Link></li>
+        <li><Link to='/code'>Code</Link></li>
+        <li><Link to='/design'>Design</Link></li>
         <li>{light ? <div className="Toggle"><label class="switch"><input onClick={handleTheme} type="checkbox" /><span class="slider round"></span></label></div> : <div className="Toggle"><label class="switch"><input onClick={handleTheme} type="checkbox" /><span class="slider round"></span></label></div>}</li>
       </ul>
     </nav>
