@@ -7,9 +7,8 @@ const About = () => {
     <section className="About">
       <header className="Title"><h1>Hi, I'm Rena</h1></header>
       <article className="Intro">
-        <p>I'm a multi-faceted creator who loves working with data and building products from 0 to the 🌛 .</p>
-        <p>Over the last year or so, I've become passionate about closing the gap between design and code and making my Figma files come to life. This realization has led me towards becoming a Design Technologist / UX Engineer. I completed The Odin Project's Full-stack Javascript Curriculum where I learned vanilla JS fundamentals, React, Node / Express, Mongoose / MongoDB and am now building side projects on my own.</p>
-
+        <p>I'm a Designer turned Coder, ex-Product Manager, and lifelong learner who is passionate about design, code, data visualizations, and, simply, building great products.</p>
+        <p>Over the last year or so, I've become passionate about closing the gap between design and code and making my Figma files come to life. This realization has led me towards becoming a Design Technologist / UX Engineer / Frontend Engineer. I completed The Odin Project's Full-stack Javascript Curriculum where I learned vanilla JS fundamentals, React, Node / Express, Mongoose / MongoDB and am now building side projects on my own.</p>
         <p>When I'm not coding or designing, I love being active, hanging out with my cat, and <a href="https://www.instagram.com/renamakesart">painting with watercolors</a> (although I haven't done so in a longggg while).</p>
       </article>
       <article className="Main__content">
@@ -19,8 +18,10 @@ const About = () => {
             <article className="Exp__education">
               <h5>Education</h5>
               <p className="Exp--education">Massachusetts Institute of Technology (MIT)</p>
+              <p className="Exp--desc">BS, Bachelor of Science</p>
               <p className="Exp--year">2008 - 2012</p>
             </article>
+
             <article className="Exp__toolbox">
               <h5>Toolbox</h5>
               <ul className="Toolbox">
