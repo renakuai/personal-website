@@ -1,5 +1,5 @@
 import React from "react";
-import CodePrjBase from '../../design-system/CodePrjBase'
+import CodePrjBase from '../../baseComponents/CodePrjBase'
 
 const WeatherApp = () => {
 
